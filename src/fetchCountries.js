@@ -1,10 +1,11 @@
+const fetchCountryFields = 'name,capital,population,flags,languages';
 export function fetchCountries(name){
-    return fetch("https://restcountries.com/v3.1/all?fields=name,capital,population,flags,languages")
+    return fetch(`https://restcountries.com/v2/name/${name}?fields=${fetchCountryFields}`)
     .then(r => {
-        if(r.length===0){
+        if (!r.ok){
             throw new Error(r.status);
         }
-        return r.json(name);
+        return r.json();
 
         }
     )

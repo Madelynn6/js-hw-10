@@ -8,9 +8,13 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-color: lightgray;
   color: #212121;
   line-height: 1.5;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
 }
 
 #search-box {
@@ -24,27 +28,47 @@ ul{
   padding: 0;
 }
 
-.hidden{
-  display: none;
-}
-
 input{
   width:500px;
   height:50px;
 }
-span{
-  font-weight: 500;
+
+.country-list{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap:20px;
 }
 
-h2{
-  font-size:36px;
-}
-
-li{
+.country-list li{
   font-size:20px;
-  margin-bottom:20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+gap:20px;
 }
 
-p{
+.country-info span{
   font-weight: 500;
+  text-transform: uppercase;
+}
+
+.country-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap:20px;
+}
+
+.country-info li{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap:20px;
+}
+
+.country-info h2{
+  font-size:36px;
+  text-transform: uppercase;
 }
